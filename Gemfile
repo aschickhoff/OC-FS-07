@@ -1,3 +1,5 @@
+gem 'dotenv-rails', groups: [:development, :test]
+
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -18,10 +20,10 @@ gem "puma", "~> 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+# Hotwire"s SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
+# Hotwire"s modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
@@ -72,5 +74,6 @@ group :test do
 end
 
 
-gem 'webpacker', '~> 5.4', '>= 5.4.4'
+gem "webpacker", "~> 5.4", ">= 5.4.4"
 gem "bootstrap", "~> 5.2", ">= 5.2.3"
+gem "flickr", "~> 2.1"

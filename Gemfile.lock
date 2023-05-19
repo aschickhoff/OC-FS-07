@@ -93,9 +93,14 @@ GEM
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.12.0)
     execjs (2.8.1)
     ffi (1.15.5)
+    flickr (2.1.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.13.0)
@@ -241,6 +246,8 @@ DEPENDENCIES
   bootstrap (~> 5.2, >= 5.2.3)
   capybara
   debug
+  dotenv-rails
+  flickr (~> 2.1)
   importmap-rails
   jbuilder
   puma (~> 5.0)

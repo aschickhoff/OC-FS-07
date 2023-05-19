@@ -1,0 +1,31 @@
+<!-- app/views/photos.html.erb -->
+<div class="container">
+  <h1>Photos</h1>
+  <div class="row">
+    <% @photos.each do |photo| %>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="<%= photo.url %>" class="card-img-top" alt="Photo">
+          <div class="card-body">
+            <h5 class="card-title">Photo Title</h5>
+            <p class="card-text">Photo Description</p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <nav aria-label="Pagination">
+    <ul class="pagination justify-content-center">
+      <% if @photos.previous_page %>
+        <li class="page-item">
+          <%= link_to 'Previous', photos_path(page: @photos.previous_page), class: 'page-link' %>
+        </li>
+      <% end %>
+      <% if @photos.next_page %>
+        <li class="page-item">
+          <%= link_to 'Next', photos_path(page: @photos.next_page), class: 'page-link' %>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</div>
