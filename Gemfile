@@ -70,3 +70,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+
+gem 'webpacker', '~> 5.4', '>= 5.4.4'
+gem "bootstrap", "~> 5.2", ">= 5.2.3"
