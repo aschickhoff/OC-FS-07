@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize the map
-  var map = L.map("map").setView([0, 0], 2);
+  var map = L.map("map").setView([40.01499, -105.27055], 13);
 
   // Add the OpenStreetMap tile layer
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Add a marker for each rider
   riderLocations.forEach(function (location) {
-    L.marker([location[0], location[1]]).addTo(map).bindPopup(location[2]);
+    var firstName = location[2];
+    var lastName = location[3];
+    var fullName = firstName + " " + lastName;
+
+    L.marker([location[0], location[1]]).addTo(map).bindPopup(fullName);
   });
 });
