@@ -1,3 +1,7 @@
+body {
+  padding-top: 56px;
+}
+
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
@@ -12,4 +16,8 @@
   border-radius: 50%;
   z-index: 9999;
   cursor: pointer;
+}
+
+#map {
+  height: calc(100vh - 56px);
 }
