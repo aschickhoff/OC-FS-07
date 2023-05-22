@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mx-auto">
+      <div class="bgt shadow mt-5 border p-5">
+        <h1>Riders</h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>First name</th>
+              <th>Last name</th>
+              <th>City of origin</th>
+              <th>State of origin</th>
+              <th>Latitude</th>
+              <th>Longitude</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @riders.each do |rider| %>
+              <tr>
+                <td><%= rider.first_name %></td>
+                <td><%= rider.last_name %></td>
+                <td><%= rider.city_of_origin %></td>
+                <td><%= rider.state_of_origin %></td>
+                <td><%= rider.latitude %></td>
+                <td><%= rider.longitude %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
