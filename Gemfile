@@ -76,4 +76,7 @@ end
 
 gem "webpacker", "~> 5.4", ">= 5.4.4"
 gem "bootstrap", "~> 5.2", ">= 5.2.3"
-gem "flickr", "~> 2.1"
+gem 'flickraw', '~> 0.9.10'
+
+# for pagination
+gem 'kaminari', '~> 1.2', '>= 1.2.2'
