@@ -4,3 +4,4 @@
 //= link_tree ../../../vendor/javascript .js
 //= link countdown.js
 //= link button2top.js
+//= link riders_map.js
