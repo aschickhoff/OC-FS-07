@@ -6,8 +6,25 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <%= link_to "Rider", riders_path, class: "nav-link" %>
+        <li class="nav-item dropdown">
+          <%= link_to "", class: "nav-link dropdown-toggle", role: "button", "aria-expanded": "false", "data-bs-toggle": "dropdown" do %>
+            Riders
+          <% end %>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Overview", riders_path, class: "dropdown-item" %></li>
+            <li class="dropdown-submenu">
+              <%= link_to "", class: "dropdown-item dropdown-toggle", role: "button" do %>
+                Special Rider
+              <% end %>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <% @riders.each do |rider| %>
+                  <li><%= link_to "#{rider.first_name} #{rider.last_name}", rider_path(rider), class: "dropdown-item" %></li>
+                <% end %>
+              </ul>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li><%= link_to "Administration", "#", class: "dropdown-item" %></li>
+          </ul>
         </li>
         <li class="nav-item">
           <%= link_to "Photos", photos_path, class: "nav-link" %>

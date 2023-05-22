@@ -1,0 +1,30 @@
+<div class="bg-image bg-image-seven"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mx-auto">
+      <div class="bgt shadow mt-5 border p-5">
+        <div class="col-md-6">
+          <h2><%= "#{@rider.first_name} #{@rider.last_name}" %></h2>
+          <table class="table">
+            <tr>
+              <th>City of origin</th>
+              <td><%= @rider.city_of_origin %></td>
+            </tr>
+            <tr>
+              <th>State of origin</th>
+              <td><%= @rider.state_of_origin %></td>
+            </tr>
+            <tr>
+              <th>Latitude</th>
+              <td><%= @rider.latitude %></td>
+            </tr>
+            <tr>
+              <th>Longitude</th>
+              <td><%= @rider.longitude %></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

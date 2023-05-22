@@ -5,3 +5,4 @@
 //= link countdown.js
 //= link button2top.js
 //= link riders_map.js
+//= link menulist.js

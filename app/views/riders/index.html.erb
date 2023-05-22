@@ -12,6 +12,7 @@
               <th>State of origin</th>
               <th>Latitude</th>
               <th>Longitude</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -23,6 +24,7 @@
                 <td><%= rider.state_of_origin %></td>
                 <td><%= rider.latitude %></td>
                 <td><%= rider.longitude %></td>
+                <td><%= link_to '', rider_path(rider), class: 'btn btn-primary btn-sm bi bi-eye', remote: true %></td>
               </tr>
             <% end %>
           </tbody>
