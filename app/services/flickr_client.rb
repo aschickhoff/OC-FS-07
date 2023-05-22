@@ -1,5 +1,3 @@
-# app/services/flickr_client.rb
-
 class FlickrClient
   def initialize(api_key:)
     FlickRaw.api_key = api_key
