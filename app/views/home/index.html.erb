@@ -1,5 +1,39 @@
-<h1>Pictures, Headline, Animation</h1>
-Countdown:
-<div id="countdown"></div>
-News and Infos:
-text
+<div class="scroll-snap-container">
+  <div class="scroll-snap-item">
+    <div id="myCarousel" class="carousel slide landing-margin" data-bs-ride="carousel" data-bs-interval="6000">
+      <div class="carousel-inner">
+        <% carousel_images = ["landing_pic_1.jpg", "landing_pic_2.jpg", "landing_pic_3.jpg", "landing_pic_4.jpg"] %>
+        <% carousel_images.each_with_index do |image, index| %>
+          <div class="carousel-item <%= "active" if index.zero? %>">
+            <%= image_tag("#{image}", class: "d-block w-100") %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="countdown-overlay">
+      <div id="countdown"></div>
+    </div>
+  </div>
+  <section class="scroll-snap-item about-section" id="about-section">
+    <div class="container top-margin">
+      <h2>Welcome to the Boulder Bike Tour!</h2>
+      <p>Date: April 1, 2024</p>
+      <p>Location: Colorado, at the foot of the majestic Rocky Mountains</p>
+      <p>
+        Gear up for an exhilarating biking experience like no other. The Boulder Bike Tour is a prestigious and inspiring race that brings together cycling enthusiasts from around the world. Whether you're a seasoned rider or a beginner, this event offers an unforgettable adventure through stunning natural landscapes.
+      </p>
+      <p>
+        Join us for a day filled with adrenaline, camaraderie, and the thrill of pushing your limits. Ride alongside fellow cyclists as you navigate challenging terrains, conquer steep climbs, and soak in the breathtaking beauty of Colorado's scenic routes.
+      </p>
+      <p>
+        Feel the rush as you pedal through winding mountain paths, witness jaw-dropping vistas, and immerse yourself in the outdoorsy atmosphere that makes this event truly special. Whether you're competing for the top spot or simply enjoying the ride, the Boulder Bike Tour promises an experience that will leave you with memories to last a lifetime.
+      </p>
+      <p>
+        Mark your calendars, start training, and get ready to be a part of this remarkable cycling extravaganza. Stay tuned for updates, registration details, and more on our website!
+      </p>
+      <p>
+        Remember, it's not just a race—it's a celebration of athleticism, determination, and the sheer joy of cycling. Get ready to embrace the spirit of the Boulder Bike Tour!
+      </p>
+    </div>
+  </section>
+</div>

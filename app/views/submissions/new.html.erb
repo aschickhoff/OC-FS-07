@@ -1,0 +1,32 @@
+<div class="bg-image-one">
+  <div class="container rider top-margin">
+    <div class="row">
+      <div class="col-md-12 mx-auto">
+        <div class="rider shadow mt-5 border p-5 bg-white">
+          <h1>Submit Your Slogan</h1>
+          <p>Enter your information and slogan idea below to participate in the Boulder Bike Tour Slogan Contest. Your slogan could become the official motto of this prestigious bike race!</p>
+          <%= form_with(model: @submission, url: submissions_path, class: "submission-form") do |form| %>
+            <div class="form-group">
+              <%= form.label :first_name, "First Name" %>
+              <%= form.text_field :first_name, class: "form-control", required: true %>
+            </div>
+            <div class="form-group">
+              <%= form.label :last_name, "Last Name" %>
+              <%= form.text_field :last_name, class: "form-control", required: true %>
+            </div>
+            <div class="form-group">
+              <%= form.label :email, "Email Address" %>
+              <%= form.email_field :email, class: "form-control", required: true %>
+            </div>
+            <div class="form-group">
+              <%= form.label :slogan, "Slogan (max 50 characters)" %>
+              <%= form.text_field :slogan, class: "form-control", required: true, maxlength: 50 %>
+            </div>
+            <%= form.submit "Submit", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

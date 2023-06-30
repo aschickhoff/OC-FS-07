@@ -6,17 +6,23 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "custom", media: 'all', 'data-turbo-track' => true %>
-    <%= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css' %>
-    <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js' %>
+    <%= stylesheet_link_tag "custom", media: "all", "data-turbo-track" => true %>
+    <%= stylesheet_link_tag "https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.min.css" %>
+    <%= stylesheet_link_tag "https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" %>
+    <%= javascript_include_tag "https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" %>
+    <%= javascript_include_tag "https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js" %>
     <%= javascript_importmap_tags %>
-    <%= javascript_include_tag "countdown" %>
-    <%= javascript_include_tag 'button2top' %>
-    <%= javascript_include_tag "riders_map" %>
-    <%= javascript_include_tag "menulist" %>
+    <%= javascript_include_tag "countdown", "button2top", "riders_map", "menulist", "masonry", "flashMessage" %>
   </head>
   <body>
     <%= render "shared/header" %>
+    <% flash.each do |key, value| %>
+      <div id="flash-message" class="flash <%= key %>">
+        <%= value %>
+      </div>
+    <% end %>
     <%= yield %>
+    <%= render "shared/footer" %>
   </body>
 </html>
+

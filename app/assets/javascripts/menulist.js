@@ -7,3 +7,4 @@ document.querySelectorAll(".dropdown-submenu").forEach(function (dropdown) {
     this.querySelector(".dropdown-menu").classList.remove("show");
   });
 });
+

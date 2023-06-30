@@ -1,6 +1,9 @@
 {
   "dependencies": {
     "@rails/webpacker": "5.4.4",
+    "bootstrap-icons": "^1.10.5",
+    "infinite-scroll": "^4.0.1",
+    "jquery": "^3.7.0",
     "webpack": "4.46.0",
     "webpack-cli": "3.3.12"
   },

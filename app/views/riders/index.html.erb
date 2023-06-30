@@ -1,34 +1,30 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 mx-auto">
-      <div class="bgt shadow mt-5 border p-5">
-        <h1>Riders</h1>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>First name</th>
-              <th>Last name</th>
-              <th>City of origin</th>
-              <th>State of origin</th>
-              <th>Latitude</th>
-              <th>Longitude</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @riders.each do |rider| %>
+<div class="bg-image-one">
+  <div class="container rider top-margin">
+    <div class="row">
+      <div class="col-md-12 mx-auto">
+        <div class="rider shadow mt-5 border p-5 bg-white">
+          <h1>Riders</h1>
+          <table class="table">
+            <thead>
               <tr>
-                <td><%= rider.first_name %></td>
-                <td><%= rider.last_name %></td>
-                <td><%= rider.city_of_origin %></td>
-                <td><%= rider.state_of_origin %></td>
-                <td><%= rider.latitude %></td>
-                <td><%= rider.longitude %></td>
-                <td><%= link_to '', rider_path(rider), class: 'btn btn-primary btn-sm bi bi-eye', remote: true %></td>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>City of origin</th>
+                <th>State of origin</th>
               </tr>
-            <% end %>
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              <% @riders.order(last_name: :asc).each do |rider| %>
+                <tr>
+                  <td><%= link_to "#{rider.first_name}", rider_path(rider), class: "plain-link hover-effect" %></td>
+                  <td><%= link_to "#{rider.last_name}", rider_path(rider), class: "plain-link hover-effect" %></td>
+                  <td><%= rider.city_of_origin %></td>
+                  <td><%= rider.state_of_origin %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>

@@ -68,6 +68,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
+    ansi (1.5.0)
     autoprefixer-rails (10.4.13.0)
       execjs (~> 2)
     bindex (0.8.1)
@@ -77,6 +78,8 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.11.6, < 3)
       sassc-rails (>= 2.0.0)
+    bootstrap-icons (1.0.13)
+      nokogiri (~> 1)
     builder (3.2.4)
     capybara (3.39.1)
       addressable
@@ -114,18 +117,6 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    kaminari (1.2.2)
-      activesupport (>= 4.1.0)
-      kaminari-actionview (= 1.2.2)
-      kaminari-activerecord (= 1.2.2)
-      kaminari-core (= 1.2.2)
-    kaminari-actionview (1.2.2)
-      actionview
-      kaminari-core (= 1.2.2)
-    kaminari-activerecord (1.2.2)
-      activerecord
-      kaminari-core (= 1.2.2)
-    kaminari-core (1.2.2)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -139,6 +130,11 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.18.0)
+    minitest-reporters (1.6.0)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
     msgpack (1.7.0)
     net-imap (0.3.4)
       date
@@ -152,6 +148,7 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.0-x64-mingw-ucrt)
       racc (~> 1.4)
+    pagy (6.0.4)
     popper_js (2.11.7)
     public_suffix (5.0.1)
     puma (5.6.5)
@@ -176,6 +173,10 @@ GEM
       activesupport (= 7.0.4.3)
       bundler (>= 1.15.0)
       railties (= 7.0.4.3)
+    rails-controller-testing (1.0.5)
+      actionpack (>= 5.0.1.rc1)
+      actionview (>= 5.0.1.rc1)
+      activesupport (>= 5.0.1.rc1)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -193,6 +194,7 @@ GEM
     reline (0.3.3)
       io-console (~> 0.5)
     rexml (3.2.5)
+    ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -256,15 +258,19 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bootstrap (~> 5.2, >= 5.2.3)
+  bootstrap-icons
   capybara
   debug
   dotenv-rails
   flickraw (~> 0.9.10)
   importmap-rails
   jbuilder
-  kaminari (~> 1.2, >= 1.2.2)
+  minitest
+  minitest-reporters
+  pagy (~> 6.0, >= 6.0.4)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
+  rails-controller-testing
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)

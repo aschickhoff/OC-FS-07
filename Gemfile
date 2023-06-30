@@ -1,4 +1,4 @@
-gem 'dotenv-rails', groups: [:development, :test]
+gem "dotenv-rails", groups: [:development, :test]
 
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
@@ -76,7 +76,12 @@ end
 
 gem "webpacker", "~> 5.4", ">= 5.4.4"
 gem "bootstrap", "~> 5.2", ">= 5.2.3"
-gem 'flickraw', '~> 0.9.10'
+gem "bootstrap-icons"
+gem "flickraw", "~> 0.9.10"
 
-# for pagination
-gem 'kaminari', '~> 1.2', '>= 1.2.2'
+gem "rails-controller-testing"
+gem "minitest"
+gem "minitest-reporters"
+
+gem "pagy", "~> 6.0", ">= 6.0.4"
+

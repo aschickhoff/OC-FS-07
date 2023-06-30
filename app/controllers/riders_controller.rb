@@ -1,11 +1,7 @@
 class RidersController < ApplicationController
-
-  def index
-    @riders = Rider.all
-  end
-
   def show
     @rider = Rider.find(params[:id])
-    @riders = Rider.all
+    @rider_locations = [[@rider.latitude, @rider.longitude, @rider.first_name, @rider.last_name]]
+    @rider_locations_json = @rider_locations.to_json
   end
 end

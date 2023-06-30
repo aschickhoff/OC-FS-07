@@ -6,3 +6,5 @@
 //= link button2top.js
 //= link riders_map.js
 //= link menulist.js
+//= link masonry.js
+//= link flashMessage.js

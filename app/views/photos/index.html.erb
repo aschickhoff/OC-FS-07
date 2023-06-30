@@ -1,25 +1,22 @@
-<div class="container">
-  <h1>Photos</h1>
-  <div class="row">
-    <% @photos.each do |photo| %>
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <a href="<%= photo[:url] %>" target="_blank">
-            <img src="<%= photo[:url] %>" class="card-img-top" alt="Photo">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title"><%= photo[:title] %></h5>
-            <p class="card-text"><%= photo[:description] %></p>
+<div class="bg-image-one-bw">
+  <div class="container top-margin rider">
+    <div class="row masonry-grid">
+      <% @photos.each do |photo| %>
+        <div class="col-md-4 mb-4 masonry-item">
+          <div class="card">
+            <a href="<%= photo[:url] %>" target="_blank">
+              <img src="<%= photo[:url] %>" class="card-img-top" alt="Photo">
+            </a>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
-  <div class="pagination">
-    <%= paginate @photos %>
+  <div class="bottom-margin d-flex justify-content-center">
+    <%= pagy_bootstrap_nav(@pagy).html_safe %>
   </div>
 </div>
-<!-- Scroll-to-top button -->
+
 <a href="#" class="scroll-to-top" title="Scroll to top">
-  <i class="fas fa-arrow-up"></i>
+  <i class="bi bi-arrow-up"></i>
 </a>

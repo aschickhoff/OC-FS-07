@@ -3,8 +3,8 @@ class FlickrClient
     FlickRaw.api_key = api_key
   end
 
-  def fetch_photos(tag:, page:)
-    page_number = page || 1 # Current page number (default: 1)
+  def fetch_photos(tag:, page: 1)
+    page_number = page || 1
 
     flickr.photos.search(tags: tag, page: page_number).map do |photo|
       {
@@ -15,3 +15,4 @@ class FlickrClient
     end
   end
 end
+

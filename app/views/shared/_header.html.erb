@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
     <%= link_to "Boulder Bike Tour", root_path, class: "navbar-brand" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,13 +17,11 @@
                 Special Rider
               <% end %>
               <ul class="dropdown-menu dropdown-menu-right">
-                <% @riders.each do |rider| %>
+                <% @riders.order(last_name: :asc).each do |rider| %>
                   <li><%= link_to "#{rider.first_name} #{rider.last_name}", rider_path(rider), class: "dropdown-item" %></li>
                 <% end %>
               </ul>
             </li>
-            <li><hr class="dropdown-divider"></li>
-            <li><%= link_to "Administration", "#", class: "dropdown-item" %></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -33,10 +31,11 @@
           <%= link_to "Locations", locations_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Submissions", root_path, class: "nav-link" %>
+          <%= link_to "Submissions", new_submission_path, class: "nav-link" %>
         </li>
-      </ul>
-      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "About", root_path(anchor: "about-section"), class: "nav-link" %>
+        </li>
       </ul>
     </div>
   </div>
